@@ -1,12 +1,20 @@
 <?php
+
+
+
 namespace DAO;
-use BO\Club;
-class ClubDAO{
+
+    use BO\Club;
+
+class ClubDAO
+{
     private $bdd;
 
-    public function __construct(\PDO $bdd){
+    public function __construct(\PDO $bdd)
+    {
         if (!is_null($bdd))
-            $this -> bdd = $bdd;}
+            $this->bdd = $bdd;
+    }
 
     public function create(Club $club)
     {
@@ -19,8 +27,7 @@ class ClubDAO{
         $club->setId($this->db->lastInsertId());
 
 
-        if ($this->db->libelle_pro="Gérant")
-        {
+        if ($this->db->libelle_pro = "Gérant") {
             foreach ($club->getGerants() as $gerant) {
                 $stmt = $this->db->prepare("INSERT INTO profil (idClb, idUti) VALUES (:idClb, :idUti)");
                 $stmt->bindParam(":idClb", $club->getId());
@@ -46,6 +53,8 @@ class ClubDAO{
         $stmt->bindParam(":addClb", $club->getaddClb());
         $stmt->execute();
     }
+
+
 
 
 }
