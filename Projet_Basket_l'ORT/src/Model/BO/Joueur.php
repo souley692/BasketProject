@@ -2,10 +2,22 @@
 namespace  src\Model\BO;
 class Joueur
 {
+    private ?int $idJoueur;
     private ?string $nomJoueur;
     private ?string $preJoueur;
-    private ?string $sexeJoueur;
     private ?\DateTime $dateNaissance;
+
+    public function getIdJoueur(): ?int {
+        return $this->idJoueur;
+    }
+
+    public function setIdJoueur(int $id): self {
+
+        if ($this->idJoueur === null) {
+            $this->idJoueur = $id;
+        }
+        return $this;
+    }
 
 
     public function getNomJoueur(): ?string{
@@ -25,14 +37,6 @@ class Joueur
         return $this;
     }
 
-    public function getSexeJoueur(): ?string{
-        return $this->sexeJoueur;
-    }
-
-    public function setSexeJoueur(?string $sexe): self{
-        $this->sexeJoueur = $sexe;
-        return $this;
-    }
 
 
 
@@ -43,9 +47,6 @@ class Joueur
             }
             if(isset($data['preJoueur'])) {
                 $this->setPreJoueur($data['preJoueur']);
-            }
-            if(isset($data['sexeJoueur'])){
-                $this->setSexeJoueur($data['sexeJoueur']);
             }
         }
     }
