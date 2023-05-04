@@ -1,57 +1,47 @@
 <?php
 namespace  src\Model\BO;
 class Joueur {
-    private $id;
-    private $prenom;
-    private $nom;
-    private $dateNaissance;
-    private $sexe;
+    private $idJoueur;
+    private $preJoueur;
+    private $nomJoueur;
+    private $dateJoueur;
     private $club;
 
-    public function __construct($id, $prenom, $nom, $dateNaissance, $sexe, $club) {
-        $this->id = $id;
-        $this->prenom = $prenom;
-        $this->nom = $nom;
-        $this->dateNaissance = $dateNaissance;
-        $this->sexe = $sexe;
+    public function __construct($idJoueur, $preJoueur, $nomJoueur, $dateJoueur, $club) {
+        $this->idJoueur = $idJoueur;
+        $this->preJoueur = $preJoueur;
+        $this->nomJoueur = $nomJoueur;
+        $this->dateJoueur = $dateJoueur;
         $this->club = $club;
     }
 
     // Accesseurs/Mutateurs
-    public function getId() {
-        return $this->id;
+    public function getIdJoueur() {
+        return $this->idJoueur;
     }
 
-    public function getPrenom() {
-        return $this->prenom;
+    public function getPreJoueur() {
+        return $this->preJoueur;
     }
 
-    public function setPrenom($prenom) {
-        $this->prenom = $prenom;
+    public function setPreJoueur($preJoueur) {
+        $this->preJoueur = $preJoueur;
     }
 
-    public function getNom() {
-        return $this->nom;
+    public function getNomJoueur() {
+        return $this->nomJoueur;
     }
 
-    public function setNom($nom) {
-        $this->nom = $nom;
+    public function setNomJoueur($nomJoueur) {
+        $this->nomJoueur = $nomJoueur;
     }
 
-    public function getDateNaissance() {
-        return $this->dateNaissance;
+    public function getDateJoueur() {
+        return $this->dateJoueur;
     }
 
-    public function setDateNaissance($dateNaissance) {
-        $this->dateNaissance = $dateNaissance;
-    }
-
-    public function getSexe() {
-        return $this->sexe;
-    }
-
-    public function setSexe($sexe) {
-        $this->sexe = $sexe;
+    public function setDateJoueur($dateJoueur) {
+        $this->dateJoueur = $dateJoueur;
     }
 
     public function getClub() {

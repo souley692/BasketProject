@@ -3,75 +3,75 @@
 namespace src\Model\BO;
 
 class Club {
-    private $id;
-    private $nom;
-    private $location;
-    private $gerants = array();
-    private $joueurs = array();
+    private $idClub;
+    private $nomClub;
+    private $locClub;
+    private $gerantsClub = array();
+    private $joueursClub = array();
 
-    public function __construct($id, $nom, $location) {
-        $this->id = $id;
-        $this->nom = $nom;
-        $this->location = $location;
+    public function __construct($idClub, $nomClub, $locClub) {
+        $this->idClub = $idClub;
+        $this->nomClub = $nomClub;
+        $this->locClub = $locClub;
     }
 
     // Accesseurs/Mutateurs
-    public function getId() {
-        return $this->id;
+    public function getIdClub() {
+        return $this->idClub;
     }
 
-    public function getNom() {
-        return $this->nom;
+    public function getNomClub() {
+        return $this->nomClub;
     }
 
-    public function setNom($nom) {
-        $this->nom = $nom;
+    public function setNomClub($nomClub) {
+        $this->nomClub = $nomClub;
     }
 
     public function getLocation() {
-        return $this->location;
+        return $this->locClub;
     }
 
-    public function setLocation($location) {
-        $this->location = $location;
+    public function setLocClub($locClub) {
+        $this->locClub = $locClub;
     }
 
-    public function getGerants() {
-        return $this->gerants;
+    public function getGerantsClub() {
+        return $this->gerantsClub;
     }
 
-    public function setGerants($gerants) {
-        $this->gerants = $gerants;
+    public function setGerantsClub($gerantsClub) {
+        $this->gerantsClub = $gerantsClub;
     }
 
-    public function getJoueurs() {
-        return $this->joueurs;
+    public function getJoueursClub() {
+        return $this->joueursClub;
     }
 
-    public function setJoueurs($joueurs) {
-        $this->joueurs = $joueurs;
+    public function setJoueursClub($joueursClub) {
+        $this->joueursClub = $joueursClub;
     }
 
     // Méthodes de gestion des gérants et joueurs
-    public function addGerant($gerant) {
-        $this->gerants[] = $gerant;
+    public function addGerant($gerantClub) {
+        $this->gerantsClub[] = $gerantClub;
     }
 
-    public function removeGerant($gerant) {
-        $key = array_search($gerant, $this->gerants);
+    public function removeGerantClub($gerantClub) {
+        $key = array_search($gerantClub, $this->gerantsClub);
         if ($key !== false) {
-            unset($this->gerants[$key]);
+            unset($this->gerantsClub[$key]);
         }
     }
 
-    public function addJoueur($joueur) {
-        $this->joueurs[] = $joueur;
+    public function addJoueurClub($joueurClub) {
+        $this->joueursClub[] = $joueurClub;
     }
 
-    public function removePlayer($joueur) {
-        $key = array_search($joueur, $this->joueurss);
+    public function removeJoueurClub($joueurClub) {
+        $key = array_search($joueurClub, $this->joueursClub);
         if ($key !== false) {
-            unset($this->joueurs[$key]);
+            unset($this->joueursClub[$key]);
         }
     }
 }
