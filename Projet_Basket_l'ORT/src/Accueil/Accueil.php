@@ -5,13 +5,18 @@
     <title>Basket'ORT</title>
 </head>
 <body>
-    <h1>BASKET'ORT</h1> <p>testo</p>
-    <div class="line-1">
+    <h1>BASKET'ORT</h1>
 
-    </div>
+    <div class="line-1"></div> <br>
+
+    <a class="font-pp" href="../Competition/Competition.php">Compétition</a>
+    <a href="../Club/Club.php">Club</a>
+    <a href="../Joueur/Joueur.php">Joueur</a>
+    <a href="../Match/Match.php">Match</a>
+    <a href="../Profil/Profil.php">Profil</a>
 
     <p class="p1">
-TEST
+        TEST
     </p>
 
 </body>
