@@ -1,54 +1,64 @@
 <?php
 namespace  src\Model\BO;
-class Joueur
-{
-    private ?int $idJoueur;
-    private ?string $nomJoueur;
-    private ?string $preJoueur;
-    private ?\DateTime $dateNaissance;
+class Joueur {
+    private $id;
+    private $prenom;
+    private $nom;
+    private $dateNaissance;
+    private $sexe;
+    private $club;
 
-    public function getIdJoueur(): ?int {
-        return $this->idJoueur;
+    public function __construct($id, $prenom, $nom, $dateNaissance, $sexe, $club) {
+        $this->id = $id;
+        $this->prenom = $prenom;
+        $this->nom = $nom;
+        $this->dateNaissance = $dateNaissance;
+        $this->sexe = $sexe;
+        $this->club = $club;
     }
 
-    public function setIdJoueur(int $id): self {
-
-        if ($this->idJoueur === null) {
-            $this->idJoueur = $id;
-        }
-        return $this;
+    // Accesseurs/Mutateurs
+    public function getId() {
+        return $this->id;
     }
 
-
-    public function getNomJoueur(): ?string{
-        return $this->nomJoueur;
-    }
-    public function setNomJoueur(?string $nom): self {
-        $this->nomJoueur = $nom;
-        return $this;
+    public function getPrenom() {
+        return $this->prenom;
     }
 
-    public function getPreJoueur(): ?string{
-        return $this->preJoueur;
+    public function setPrenom($prenom) {
+        $this->prenom = $prenom;
     }
 
-    public function setPreJoueur(?string $prenom): self{
-        $this->preJoueur = $prenom;
-        return $this;
+    public function getNom() {
+        return $this->nom;
     }
 
-
-
-
-    public function __construct(?array $data = null){
-        if($data !== null) {
-            if(isset($data['nomJoueur'])) {
-                $this->setNomJoueur($data['nomJoueur']);
-            }
-            if(isset($data['preJoueur'])) {
-                $this->setPreJoueur($data['preJoueur']);
-            }
-        }
+    public function setNom($nom) {
+        $this->nom = $nom;
     }
 
+    public function getDateNaissance() {
+        return $this->dateNaissance;
+    }
+
+    public function setDateNaissance($dateNaissance) {
+        $this->dateNaissance = $dateNaissance;
+    }
+
+    public function getSexe() {
+        return $this->sexe;
+    }
+
+    public function setSexe($sexe) {
+        $this->sexe = $sexe;
+    }
+
+    public function getClub() {
+        return $this->club;
+    }
+
+    public function setClub($club) {
+        $this->club = $club;
+    }
 }

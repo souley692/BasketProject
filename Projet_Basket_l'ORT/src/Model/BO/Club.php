@@ -2,87 +2,76 @@
 
 namespace src\Model\BO;
 
-class Club
-{
-
-    private $idClb;
-    private $nomClb;
-    private $addClb;
-    private $cpClb;
-
+class Club {
+    private $id;
+    private $nom;
+    private $location;
     private $gerants = array();
     private $joueurs = array();
 
-    public function __construct($nomClb, $addClb, $cpClb)
-    {
-        $this->nomClb = $nomClb;
-        $this->addClb = $addClb;
-        $this->cpClb = $cpClb;
+    public function __construct($id, $nom, $location) {
+        $this->id = $id;
+        $this->nom = $nom;
+        $this->location = $location;
     }
 
-    public function getId()
-    {
-        return $this->idClb;
+    // Accesseurs/Mutateurs
+    public function getId() {
+        return $this->id;
     }
 
-
-    public function setID(int $idClb)
-    {
-
-        $this->idClb = $idClb;
-
-
+    public function getNom() {
+        return $this->nom;
     }
 
-    public function getNom()
-    {
-        return $this->nomClb;
+    public function setNom($nom) {
+        $this->nom = $nom;
     }
 
-    public function setNom(string $nomClb)
-    {
-        $this->nomClb = $nomClb;
+    public function getLocation() {
+        return $this->location;
     }
 
-    public function getaddClb()
-    {
-        return $this->addClb;
+    public function setLocation($location) {
+        $this->location = $location;
     }
 
-    public function setaddClb(string $addClb)
-    {
-        $this->addClb = $addClb;
-    }
-
-    public function getGerants()
-    {
+    public function getGerants() {
         return $this->gerants;
     }
 
-    public function addGerant(/* type gérant/$gerant) {
-        $this->gerants[] = $gerant;
-    }
-
-    public function removeGerant(/ type gérent/$gerant) {
-        $index = array_search($gerant, $this->gerants);
-        if ($index !== false) {
-            unset($this->gerants[$index]);
-        }
+    public function setGerants($gerants) {
+        $this->gerants = $gerants;
     }
 
     public function getJoueurs() {
         return $this->joueurs;
     }
 
-    public function ajoutJoueur(/ type joueur/$joueur) {
+    public function setJoueurs($joueurs) {
+        $this->joueurs = $joueurs;
+    }
+
+    // Méthodes de gestion des gérants et joueurs
+    public function addGerant($gerant) {
+        $this->gerants[] = $gerant;
+    }
+
+    public function removeGerant($gerant) {
+        $key = array_search($gerant, $this->gerants);
+        if ($key !== false) {
+            unset($this->gerants[$key]);
+        }
+    }
+
+    public function addJoueur($joueur) {
         $this->joueurs[] = $joueur;
     }
 
-    public function removeJoueur(/ type joueur*/ $joueur)
-    {
-        $index = array_search($joueur, $this->joueurs);
-        if ($index !== false) {
-            unset($this->joueurs[$index]);
+    public function removePlayer($joueur) {
+        $key = array_search($joueur, $this->joueurss);
+        if ($key !== false) {
+            unset($this->joueurs[$key]);
         }
     }
 }
