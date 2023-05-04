@@ -53,7 +53,7 @@ Insert into gagner(IdClub ,idMatch ) values
                                          (1011,5003),
                                          (1013,5004);
 
-Insert into crée( idComp ,idMatch )  values
+Insert into crée( idComp ,idMatch ) values
                                         (17001,5001),
                                         (17001,5002),
                                         (17001,5003),
