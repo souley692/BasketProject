@@ -13,11 +13,9 @@
         <a href="../Club/Club.php">Club</a>
         <a href="../Joueur/Joueur.php">Joueur</a>
         <a href="../Match/Match.php">Match</a>
-        <a href="../Profil/Profil.php">Profil</a>
+        <a href="../Profil/Profil.php">Profil</a> <br>
 
-    <p class="p1">
-        TEST
-    </p>
+<img src="../../res/cours_recre.PNG">
 
 </body>
 </html>
