@@ -1,14 +1,17 @@
+
+.h1{
+    color: chartreuse;
+}
+
 .line-1 {
     height: 1px;
     background: black;
 }
 
-.p1 {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
+.font-style_ecrans {
+    color: brown;
 }
 
 .font-pp {
-    height: 2px;
-    font-weight: bold;
+    font-style: italic;
 }
