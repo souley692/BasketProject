@@ -1,8 +1,7 @@
 <?php
 
-
-
 namespace DAO;
+require_once "../../config/Connexionbdd.php";
 
     use BO\Club;
 
@@ -17,9 +16,13 @@ namespace DAO;
         }
 
         // méthode pour ajouter un club à la base de données
-        public function add(Club $club)
+        public function add($club)
         {
-            $stmt = $this->pdo->prepare("INSERT INTO Club (nomClub, locClub) VALUES (:nomClub, :locClub)");
+            $tab = array();
+            $db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+            $conn = connectBdd($tab);
+            $querry = mysqli_query($conn,"INSERT INTO Club (nomClub, locClub) VALUES (:nomClub, :locClub))");
+            $stmt = $this->pdo->prepare();
             $stmt->execute(array(
                 ':nomClub' => $club->getNom(),
                 ':locClub' => $club->getLocation()

@@ -15,7 +15,7 @@ function connectBdd(array $infoBdd): ?\PDO {
     $dsn = "mysql:dbname=$DBname;host=$myhost;port=$myport;charset=$Charset";
 
 
-    $bd = new \PDO($dsn, $meUser, $mdp);j
+    $bd = new \PDO($dsn, $meUser, $mdp);
 
     return $bd;
 
