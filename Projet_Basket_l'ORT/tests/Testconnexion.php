@@ -9,7 +9,7 @@ define('DUMP', true);
 //  Pour avoir la configuration et les informations de connexion dans $infoBdd
 require_once '../config/appConfig.php';
 //  Pour utiliser les fonctions
-require_once '../src/fonctionsUtiles.php';
+require_once '../src/Connexionbdd.php';
 
 //Infos de votre tableau de connexion
 dump_var($infoBdd, DUMP, 'Info de votre BDD :');
