@@ -2,7 +2,9 @@
 
 namespace src\Model\BO;
 
-class Club {
+class
+
+Club {
     private $idClub;
     private $nomClub;
     private $locClub;
