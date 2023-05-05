@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>Résultats de la compétition de basket-ball</title>
-    <link rel="stylesheet" href="Competition.css.css">
+    <link rel="stylesheet" href="Competition.css">
 </head>
 <body>
 	<h1>Résultats en direct</h1>
