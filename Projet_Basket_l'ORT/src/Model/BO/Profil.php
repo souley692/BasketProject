@@ -4,7 +4,7 @@ namespace src\Model\BO;
 
 class Profil
 {
-    private $nom;
+    private ?string $nom;
     private $prenom;
     private $telephone;
     private $profil; // Recupération requête SQL
