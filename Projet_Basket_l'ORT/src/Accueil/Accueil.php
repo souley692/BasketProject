@@ -15,7 +15,7 @@
         <a href="../Match/Match.php">Match</a>
         <a href="../Profil/Profil.php">Profil</a> <br> <br>
 
-<img src="../../res/cours_recre.PNG">
+<img width="600" height="400" src="../../res/cours_recre.PNG">
 
 </body>
 </html>
