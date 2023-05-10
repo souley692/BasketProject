@@ -59,12 +59,12 @@ Club {
     }
 
     // Méthodes de gestion des gérants et joueurs
-    public function addGerant(GerantClub $gerantClub): self{
+    public function addGerant(Club $gerantClub): self{
         $this->gerantsClub[] = $gerantClub;
         return $this;
     }
 
-    public function removeGerantClub(GerantClub $gerantClub): self{
+    public function removeGerantClub(Club $gerantClub): self{
         $key = array_search($gerantClub, $this->gerantsClub);
         if ($key !== false) {
             unset($this->gerantsClub[$key]);
