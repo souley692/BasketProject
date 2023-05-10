@@ -1,7 +1,7 @@
 <?php
 
 namespace DAO;
-require_once '../../Joueur.php';
+use BO\Joueur;
 class JoueurDAO
 {
     private $db;
