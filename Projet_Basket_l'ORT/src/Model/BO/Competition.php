@@ -37,9 +37,10 @@ class Competition
 
     function __construct(?array $datas = null) {
         if(!is_null($datas)){
-            (isset($datas['numAct'])) ? $this->setNumAct($datas['numAct']) : $this->numAct = null;
-            (isset($datas['nomAct'])) ? $this->setNomAct($datas['nomAct']) : $this->nomAct = '';
-            (isset($datas['preAct'])) ? $this->setPreAct($datas['preAct']) : $this->preAct = '';
+            (isset($datas['idComp'])) ? $this->setIdcomp($datas['idComp']) : $this->idcomp = null;
+            (isset($datas['dat_debComp'])) ? $this->setDat_debComp($datas['dat_debComp']) : $this->dat_debComp= '';
+            (isset($datas['dat_finComp'])) ? $this->setDat_finComp($datas['dat_finComp']) : $this->dat_finComp = '';
+            (isset($datas['nb_match_maxComp'])) ? $this->setNb_match_maxComp($datas['nb_match_maxComp']) : $this->nb_match_maxComp = '';
         }
 
     }
