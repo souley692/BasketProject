@@ -19,7 +19,6 @@ require_once "../../config/Connexionbdd.php";
         public function add($club)
         {
             $tab = array();
-            $db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
             $conn = connectBdd($tab);
             $querry = mysqli_query($conn,"INSERT INTO Club (nomClub, locClub) VALUES (:nomClub, :locClub))");
             $stmt = $this->pdo->prepare();
