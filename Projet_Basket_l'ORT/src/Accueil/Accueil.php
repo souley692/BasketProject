@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Accueil.css">
     <title>Basket'ORT</title>
 </head>
-<body bgcolor="#add8e6">
+<body bgcolor="yellow">
     <h1 style="font-style: italic">BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT</h1>
 
     <div class="line-1"></div> <br>
