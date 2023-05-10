@@ -4,7 +4,10 @@
 <html>
 <title>La Creation du Club</title>
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Club.css">
     <h1>Bienvenu au page de la creation du club</h1>
+
 </head>
 <body>
 <form method="POST" action="traitCreationClub.php">

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="Competition.css">
 </head>
 <body>
-	<h1>Résultats en direct</h1>
+	<h1>Competition</h1>
+
+	<a href="CreeCompetition.php">Cree une nouvelle competision</a>
 	<table>
 		<tr>
 			<th>Equipe</th>

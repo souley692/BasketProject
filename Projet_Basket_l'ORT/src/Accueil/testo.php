@@ -4,36 +4,35 @@
     <link rel="stylesheet" href="Accueil.css">
     <title>Basket'ORT</title>
 </head>
-<body bgcolor="#696969">
+<body>
     <header>
         <h1 style="font-style: italic">BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT</h1>
+
+        <section style="display: inline-block;">
+            <h2>Compétitions</h2>
+        </section>
+
+        <section style="display: inline-block;">
+            <h2>Clubs</h2>
+        </section>
+
+        <section style="display: inline-block;">
+            <h2>Joueurs</h2>
+        </section>
+
+        <section style="display: inline-block;">
+            <h2>Matches</h2>
+        </section>
+
+        <section style="display: inline-block;">
+            <h2>Profils</h2>
+        </section>
     </header>
 
     <div class="line-1"></div> <br>
 
     <main>
-        <section style="display: inline-block;">
-            <a class="font-style_ecrans" href = ../Competition/Competition.php">Competition</a>
-        </section>
 
-        <section style="display: inline-block;">
-            <a href="../Club/Club.php">Club</a>
-        </section>
-
-        <section style="display: inline-block;">
-            <a href="../Joueur/Joueur.php">Joueur</a>
-        </section>
-
-        <section style="display: inline-block;">
-            <a href="../Match/Match.php">Match</a>
-        </section>
-
-        <section style="display: inline-block;">
-            <a href="../Profil/Profil.php">Profil</a> <br> <br>
-        </section>
     </main>
-
-<img width="600" height="400" src="../../res/cours.PNG">
-
 </body>
 </html>

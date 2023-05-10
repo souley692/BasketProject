@@ -1,54 +1,78 @@
 <?php
 namespace  src\Model\BO;
-class Joueur {
-    private $idJoueur;
-    private $preJoueur;
-    private $nomJoueur;
-    private $dateJoueur;
-    private $club;
+use Cassandra\Date;
 
-    public function __construct($idJoueur, $preJoueur, $nomJoueur, $dateJoueur, $club) {
-        $this->idJoueur = $idJoueur;
-        $this->preJoueur = $preJoueur;
-        $this->nomJoueur = $nomJoueur;
-        $this->dateJoueur = $dateJoueur;
-        $this->club = $club;
+class Joueur {
+    private ?int $idJoueur = null;
+    private ?string $preJoueur;
+    private ?string $nomJoueur;
+    private \DateTime $dateJoueur;
+    private Club $clubJoueur;
+
+    public function __construct(?array $datas = null)
+    {
+        // Si le paramètre est différent de false
+        if(!is_null($datas)){
+            // Si tel élément existe alors on lui attribut la valeur, sinon il est null
+            (isset($datas['idJoueur']))?$this-> setIdJoueur($datas['idJoueur']):$this->numAct = null;
+            (isset($datas['nomJoueur']))?$this-> setNomJoueur($datas['nomJoueur']):$this->nomAct ="";
+            (isset($datas['preJoueur']))?$this-> setPreJoueur($datas['preJoueur']):$this->preAct ="";
+            (isset($datas['dateJoueur']))?$this-> setDateJoueur($datas['dateJoueur']):$this->dateJoueur=date_date_set();
+            (isset($datas['clubJoueur']))?$this-> setClubJoueur(($datas['clubJoueur'])):$this->clubJoueur;
+        }
     }
 
     // Accesseurs/Mutateurs
-    public function getIdJoueur() {
+    public function getIdJoueur():?int{
         return $this->idJoueur;
     }
 
-    public function getPreJoueur() {
+    function setIdJoueur(int $idJoueur):self{
+        if($this->idJoueur == null) {
+            $tmp = filter_var($idJoueur, FILTER_VALIDATE_INT);
+            if (!is_null($tmp)) {
+                $this->idJoueur = $tmp;
+            }
+            else {
+                $this->idJoueur = null;
+            }
+        }
+
+        return $this;
+    }
+    public function getPreJoueur():?string {
         return $this->preJoueur;
     }
 
-    public function setPreJoueur($preJoueur) {
+    public function setPreJoueur(string $preJoueur):self {
         $this->preJoueur = $preJoueur;
+        return $this;
     }
 
-    public function getNomJoueur() {
+    public function getNomJoueur():?string {
         return $this->nomJoueur;
     }
 
-    public function setNomJoueur($nomJoueur) {
+    public function setNomJoueur(string $nomJoueur):self {
         $this->nomJoueur = $nomJoueur;
+        return $this;
     }
 
-    public function getDateJoueur() {
+    public function getDateJoueur():?\DateTime {
         return $this->dateJoueur;
     }
 
-    public function setDateJoueur($dateJoueur) {
+    public function setDateJoueur(\DateTime $dateJoueur):self {
         $this->dateJoueur = $dateJoueur;
+        return $this;
     }
 
-    public function getClub() {
-        return $this->club;
+    public function getClubJoueur(): Club {
+        return $this->clubJoueur;
     }
 
-    public function setClub($club) {
-        $this->club = $club;
+    public function setClubJoueur(Club $clubJoueur):self {
+        $this->clubJoueur = $clubJoueur;
+        return $this;
     }
 }
