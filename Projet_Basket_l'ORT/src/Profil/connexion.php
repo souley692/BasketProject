@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Profil.css">
 </head>
 
-<body>
+<body class="body-test">
 <h1>Bienvenu sur basket'ort Admin</h1>
 <div class="formulaireAdmin">
     <form action="traitAdmin.php" method="post">

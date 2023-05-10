@@ -5,11 +5,11 @@ namespace src\Model\BO;
 class Profil
 {
     private ?string $nom;
-    private $prenom;
-    private $telephone;
-    private $profil; // Recupération requête SQL
+    private ?string $prenom;
+    private ?int $telephone;
+    private ?string $profil; // Recupération requête SQL
 
-    public function __construct($nom, $prenom, $telephone, $profil)
+    public function __construct(?string $nom, ?string $prenom, ?int $telephone, ?string $profil)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -18,45 +18,45 @@ class Profil
     }
 
     // --------------------------------------------- //
-    function getNom()
+    public function getNom() : ?string
     {
         return $this->nom;
     }
 
-    function setNom($nom)
+    function setNom(?string $nom)
     {
         $this->nom = $nom;
     }
 
     // --------------------------------------------- //
-    function getPrenom()
+    function getPrenom() : ?string
     {
         return $this->prenom;
     }
 
-    function setPrenom($prenom)
+    function setPrenom(?string $prenom)
     {
         $this->prenom = $prenom;
     }
 
     // --------------------------------------------- //
-    function getTelephone()
+    function getTelephone(): ?int
     {
         return $this->telephone;
     }
 
-    function setTelephone($telephone)
+    function setTelephone(?int $telephone)
     {
         $this->telephone = $telephone;
     }
 
     // --------------------------------------------- //
-    function getProfil()
+    function getProfil() : ?string
     {
         return $this->profil;
     }
 
-    function setProfil($profil)
+    function setProfil(?string $profil)
     {
         $this->profil = $profil;
     }
