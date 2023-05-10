@@ -25,7 +25,6 @@ use BO\Competition;
 		var_dump($res);
 	}
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +51,7 @@ use BO\Competition;
 			</div>
 			</br>
 
-			<input type="submit" value="Cree la compet">
+			<input type="submit" value="Cree la competition">
 
 		</form>
 
