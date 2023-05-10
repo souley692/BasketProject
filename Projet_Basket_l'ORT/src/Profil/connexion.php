@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Base php</title>
-    <link rel="stylesheet" href="Profil.css">
+    <link rel="stylesheet" href="../../public/css/connexion2.css">
 </head>
 
-<body>
-<h1>Bienvenu sur basket'ort Admin</h1>
-<div class="formulaireAdmin">
+<body id="formulaire">
     <form action="traitAdmin.php" method="post">
-        <label for="idAdmin">Admin</label>
+        <h1 style="font-style: italic"> Bienvenu sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Admin</h1>
+       <div class="input">
+        <label for="idAdmin"></label>
         <input id="idAdmin" type="text" name="idAdmin"><br>
-        <label for="mdpAdmin">mot de passe</label>
-        <input id="mdpAdmin" type="text" name="mdpAdmin"><br>
-        <input type="submit" value="Connexion" id="Connexion" name="buttom">
+        <label for="mdpAdmin"></label>
+        <input id="mdpAdmin" type="password" name="mdpAdmin"><br>
+    </div>
+        <p class="inscr">Je n'ai pas de <span>compte</span>.Je m'en <span>crée</span> un</p>
+        <div align="center">
+            <input type="submit" value="Connexion" id="Connexion" name="buttom">
+        </div>
     </form>
-</div>
 </body>
 </html>
