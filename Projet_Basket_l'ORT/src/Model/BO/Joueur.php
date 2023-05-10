@@ -17,8 +17,8 @@ class Joueur {
             (isset($datas['idJoueur']))?$this-> setIdJoueur($datas['idJoueur']):$this->numAct = null;
             (isset($datas['nomJoueur']))?$this-> setNomJoueur($datas['nomJoueur']):$this->nomAct ="";
             (isset($datas['preJoueur']))?$this-> setPreJoueur($datas['preJoueur']):$this->preAct ="";
-            (isset($datas['dateJoueur']))?$this-> setDateJoueur($datas['dateJoueur']):$this->dateJoueur = date_time_set();
-            (isset($datas['clubJoueur']))?$this-> setClubJoueur(($datas['clubJoueur'])):$this->clubJoueur
+            (isset($datas['dateJoueur']))?$this-> setDateJoueur($datas['dateJoueur']):$this->dateJoueur=date_date_set();
+            (isset($datas['clubJoueur']))?$this-> setClubJoueur(($datas['clubJoueur'])):$this->clubJoueur;
         }
     }
 
