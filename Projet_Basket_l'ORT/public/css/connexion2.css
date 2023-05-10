@@ -1,0 +1,56 @@
+#formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+}
+form{
+    background-color: white;
+    margin-top: 20px;
+    padding: 40px 60px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+form.input{
+    display: flex;
+    flex-direction: column;
+}
+form.input input[type="password"], input[type ="text"]{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+    outline: none;
+    color: cyan;
+
+
+}
+form.input input[type="password"], input[type="password"]{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+    outline: none;
+    color: cyan;
+
+
+}
+form p.inscr{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #878787;
+}
+form p.inscr span{
+    color: cyan;
+}
+
+form input{
+    padding: 15px 25px;
+    border:none;
+    border-radius:5px;
+    font-size:15px;
+    color: #f2f2f2;
+    background-color: cyan;
+    outline: none;
+    cursor: pointer;
+}

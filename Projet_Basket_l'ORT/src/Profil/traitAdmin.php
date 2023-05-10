@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Base php</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/profil.css">
 </head>
 
 <body>
 <?php
-require_once 'connexion.php';
+require_once '../config/connexion.php';
 require_once '../config/appConfig.php';
 
 
-$nom = filter_input(INPUT_POST,"nomPers2", FILTER_SANITIZE_SPECIAL_CHARS);
+$= filter_input(INPUT_POST,"nomPers2", FILTER_SANITIZE_SPECIAL_CHARS);
 
 $prenom = filter_input(INPUT_POST,"prenomPers2", FILTER_SANITIZE_SPECIAL_CHARS);
 
 $age = filter_input(INPUT_POST,"agePers2", FILTER_SANITIZE_NUMBER_INT);
 
-$tabPers = creerTabPersonne($nom, $prenom, $age);
+$tabPers = createteble($nom, $prenom, $age);
 
 //var_dump($tabPers);
 $_SESSION['tabPers'][]= $tabPers;
@@ -46,7 +46,6 @@ $_SESSION['tabPers'][]= $tabPers;
         </tr>
         <tr>
             <?php
-
             }
             ?>
 

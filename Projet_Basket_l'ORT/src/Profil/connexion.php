@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" media="screen" href="../../public/css/connexion2.css">
     <title>Base php</title>
-    <link rel="stylesheet" href="Profil.css">
 </head>
 
-<body>
-<h1>Bienvenu sur basket'ort Admin</h1>
-<div class="formulaireAdmin">
+<body id="formulaire">
+
+<br>
+
     <form action="traitAdmin.php" method="post">
-        <label for="idAdmin">Admin</label>
-        <input id="idAdmin" type="text" name="idAdmin"><br>
-        <label for="mdpAdmin">mot de passe</label>
-        <input id="mdpAdmin" type="text" name="mdpAdmin"><br>
-        <input type="submit" value="Connexion" id="Connexion" name="buttom">
+        <h1 style="font-style: italic">Bienvenue sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Admin</h1>
+       <div class="input">
+        <label for="idAdmin"></label> <br>
+        <input id="idAdmin" type="text" name="idAdmin" placeholder="identifiant"><br>
+        <label for="mdpAdmin"></label>
+        <input id="mdpAdmin" type="password" name="mdpAdmin" placeholder="mot de passe"><br>
+       </div>
+        <p class="inscr" style="font-style: italic">Je n'ai pas de <span>compte</span> .Je m'en <span>crée </span>un. </p>
+        <div align="center">
+            <input type="submit" value="Connexion" id="Connexion" name="buttom">
+        </div>
+
+
     </form>
-</div>
+
 </body>
 </html>
