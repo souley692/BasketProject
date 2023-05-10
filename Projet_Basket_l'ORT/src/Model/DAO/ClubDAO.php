@@ -20,8 +20,7 @@ require_once "../../config/Connexionbdd.php";
         {
             $tab = array();
             $conn = connectBdd($tab);
-            $querry = mysqli_query($conn,"INSERT INTO Club (nomClub, locClub) VALUES (:nomClub, :locClub))");
-            $stmt = $this->pdo->prepare();
+            $stmt = $this->pdo->prepare("INSERT INTO Club (nomClub, locClub) VALUES (:nomClub, :locClub))");
             $stmt->execute(array(
                 ':nomClub' => $club->getNom(),
                 ':locClub' => $club->getLocation()
