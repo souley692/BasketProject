@@ -1,0 +1,74 @@
+
+.h1{
+    color: chartreuse;
+}
+
+.line-1 {
+    height: 1px;
+    background: black;
+}
+
+.font-color {
+    color: yellow;
+}
+
+.font-pp {
+    font-style: italic;
+}
+
+h1{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    margin: 10px;
+    font-family: sans-serif;
+}
+
+h3{
+    line-height: 1.4;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+image{
+    display: inline-block;
+    margin: 20px;
+    vertical-align: auto;
+}
+
+.section-2{
+    line-height: 1.4;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 80px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: navy;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:focus,
+a:hover {
+    border-bottom: 1px solid;
+}
+
+a:active {
+    color: red;
+}

@@ -4,20 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Match.css">
-    <title>Basket'ORT</title>
+    <title>Page Match</title>
 </head>
-<body bgcolor="yellow">
-    <h1 style="font-style: italic">BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT</h1>
-
-    <div class="line-1"></div> <br>
-
-        <a class="font-style_ecrans" href ="../Competition/Competition.php">Competition</a>
-        <a href="../Club/Club.php">Club</a>
-        <a href="../Joueur/Joueur.php">Joueur</a>
-        <a href="../Match/Match.php">Match</a>
-        <a href="../Profil/Profil.php">Profil</a> <br> <br>
-
-<img width="600" height="400" src="../../res/cours.PNG">
+<body>
+<h1>Visualisation des matchs</h1>
+<table>
+    <tr>
+        <th>Equipe domicile</th>
+        <th>Score domicile</th>
+        <th>Score visiteur</th>
+        <th>Equipe visiteur</th>
+    </tr>
+    <tr>
+        <td>Golden State Warriors</td>
+        <td>110</td>
+        <td>98</td>
+        <td>Los Angeles Lakers</td>
+    </tr>
+    <tr>
+        <td>Brooklyn Nets</td>
+        <td>120</td>
+        <td>115</td>
+        <td>Philadelphia 76ers</td>
+    </tr>
+    <tr>
+        <td>Chicago Bulls</td>
+        <td>102</td>
+        <td>90</td>
+        <td>Miami Heat</td>
+    </tr>
+</table>
 
 </body>
 </html>
