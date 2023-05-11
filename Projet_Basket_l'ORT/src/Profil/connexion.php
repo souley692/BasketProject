@@ -16,7 +16,7 @@
         <label for="mdpAdmin"></label>
         <input id="mdpAdmin" type="password" name="mdpAdmin"><br>
     </div>
-        <p class="inscr">Vous avez pas de <span>compte</span>.Veuiller retourner sur la page  <span>Profil</span> afin d'utiliser </p>
+        <p class="inscr">Vous n'avez pas de <span>compte</span>. Veuiller retourner sur la page <span>Profil</span>.</p>
         <div align="center">
             <input type="submit" value="Connexion" id="Connexion" name="buttom">
         </div>
