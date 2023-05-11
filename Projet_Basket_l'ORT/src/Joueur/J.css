@@ -55,3 +55,8 @@ th {
     background-color: #333;
     color: #fff;
 }
+
+.input-t{
+    align-content: center;
+    vertical-align: bottom;
+}

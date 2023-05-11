@@ -26,7 +26,7 @@
 <main>
     <section id="membres">
         <h2>Membres</h2>
-        <button id="ajouterMembre">Ajouter un membre</button>
+        <button id="ajouterMembre">Ajouter un membre</button> <br> <br>
         <table>
             <thead>
 
