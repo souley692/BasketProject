@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
     <title>Creation des joueurs</title>
-    <link rel="stylesheet" href="Joueur.css">
+    <link rel="stylesheet" href="J.css">
 </head>
 <body>
 
@@ -47,4 +47,10 @@
             <option value="Arrière">Arrière</option>
             <option value="Ailier">Ailier</option>
             <option value="Ailier-fort">Ailier-f
-                <input type="submit" value="Créer le joueur">
+                <input style="margin-top: 15px" type="submit" value="Créer le joueur">
+            </option>
+        </select>
+    </form>
+</main>
+</body>
+</html>

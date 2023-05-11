@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Gestion des joueurs</title>
-    <link rel="stylesheet" href="Joueur.css">
+    <link rel="stylesheet" href="J.css">
 </head>
 <body>
 
