@@ -1,48 +1,109 @@
 <?php
 
+
 namespace DAO;
 use BO\Joueur;
 class JoueurDAO
 {
-    private $db;
+    private $bdd;
 
-    public function __construct($db)
-    {
-        $this->db = $db;
+    public function __construct(PDO $bdd) {
+        $this->bdd = $bdd;
     }
 
-    public function getById($id)
-    {
-        // Requête SQL pour récupérer le joueur par son ID
-        $sql = "SELECT * FROM Joueur WHERE idJoueur = :idJoueur";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(":id", $id);
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // Création de l'objet PlayerBO à partir des données de la base de données
-        $player = new Joueur($row['idJoueur'], $row['nomJoueur'], $row['preJoueur'], $row['dateJoueur'], null);
-
-        // Récupération du club du joueur
-        $sql = "SELECT * FROM Club WHERE id = :club_id";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(":club_id", $row['club_id']);
-        $stmt->execute();
-        $clubRow = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // Création de l'objet ClubBO du joueur
-        $club = new Club($clubRow['idClub'], $clubRow['nomClub'], $clubRow['locClub']);
-        $player->setClub($club);
-
-        return $player;
-    }
-
-    public function save($joueur)
-    {
-        if ($joueur->getIdJoueur() === null) {
-            // Insertion du joueur dans la base de données
-            $sql = "INSERT INTO Player (nomJoueur, preJoueur, dateJoueur, club_id) VALUES (:nomJoueur, :prenomJoueur, :dateJoueur, :club_id)";
-            $stmt = $this;
+    function getAll(): ?array {
+        $resultSet = NULL;
+        // Créer la requête SQL qui va permettre de récupérer toutes les oeuvres
+        $req = "SELECT * FROM Joueur";
+        //Exécution de la rêquete
+        $res = $this->bdd->query($req);
+        //Si votre requête renvoie quelque chose, parcourez le résultat et insérer le dans $resultSet;
+        if($res){
+            while($row = $res->fetch(\PDO::FETCH_ASSOC)){
+                $resultSet [] = new Joueur($row);//Car on veut un tableau d'acteur
+            }
         }
+        // renvoi de votre tableau contenant l'ensemble des oeuvres
+        return $resultSet;
     }
-}
+
+
+    public function getById($id) {
+        $stmt = $this->bdd->prepare("SELECT * FROM Joueur");
+        $stmt->bindValue(":id", $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+
+    function insert(Joueur $unJoueur): ?Joueur {
+
+        $req = "INSERT INTO Joueur(nomJoueur, preJoueur) VALUE (:nom, :prenom); ";
+        // On prépare la rêquete
+        $reqPrep = $this->bdd->prepare($req);
+        //On remplace les infos de la req préparée
+        $nom = $unJoueur->getNomJoueur();
+        $prenom = $unJoueur->getPreJoueur();
+        $req = $reqPrep->execute(
+            [ ':nom' => $nom,
+                ':prenom'=>$prenom]
+        );
+        if ($req)// Si ma requête s'est bien passé
+        {
+            $idJoueur = $this->bdd->lastInsertId();//$this->bdd  =  $bdd
+            $unJoueur->setIdJoueur($idJoueur);
+        }
+
+        //retourner le tableau $oeuvre maj avec l'id
+
+        return $unJoueur;
+    }
+
+    function update(Joueur $unJoueur): ?Joueur
+    {
+
+        $resultat = null;
+
+        $id = $unJoueur->getIdJoueur();
+        $nom = $unJoueur->getNomJoueur();
+        $prenom = $unJoueur->getPreJoueur();
+        $req = "UPDATE Joueur SET nomJoueur= :nom, preJoueur= :prenom WHERE idJoueur= :id";
+        $reqPrep = $this->bdd->prepare($req);
+        $res = $reqPrep->execute(
+            [':nom' => $nom,
+                ':prenom' => $prenom,
+                ':id' => $id]);
+
+        if ($res) {
+            $resultat = $unJoueur;
+        }
+        return $resultat;
+    }
+
+    function delete(Joueur $unJoueur): ?Joueur{
+
+        $id = $unJoueur->getIdJoueur();
+        $nom = $unJoueur->getNomJoueur();
+        $prenom = $unJoueur->getPreJoueur();
+
+        $resultat = null;
+
+        $req = "DELETE FROM Joueur WHERE idJoueur = :id";
+        $reqPrep = $this->bdd->prepare($req);
+        $res = $reqPrep->execute(
+            [":id"=>$id]
+        );
+
+        if ($res){
+            $resultat = $unJoueur;
+        }
+        return $resultat;
+
+    }
+
+
+
+
+
+
+    }
