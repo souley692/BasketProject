@@ -53,18 +53,22 @@ class CompetitionDAO
 
     function insert(Competition $uneCompet): ?Competition{
 
+        $DateDebut = date_create($uneCompet->getDat_debComp()->format('Y-m-d'));
+        $DateFin = date_create($uneCompet->getDat_finComp()->format('Y-m-d'));
+        $NbMatchMax = (int)($uneCompet->getNb_match_maxComp());
+
+
+
         $req = "INSERT INTO gestincompetion (date_debutComp,date_finComp,nb_match_maxcom) VALUES (:dateDebutComp, :dateFinComp, :nombreMatchMax);";
         // On prépare la rêquete
         $reqPrep = $this ->bdd->prepare($req);
         //On remplace les infos de la req préparée
-        $dateDebut = $uneCompet->getDat_debComp();
-        $dateFin = $uneCompet->getDat_finComp();
-        $nombreMatchMax = $uneCompet->getNb_match_maxComp();
+
         $res = $reqPrep->execute(
             [ 
-                ':dateDebutComp' => $dateDebut,
-                ':dateFinComp'=>$dateFin,
-                ':nombreMatchMax'=>$nombreMatchMax,
+                ':dateDebutComp' => $DateDebut,
+                ':dateFinComp'=>$DateFin,
+                ':nombreMatchMax'=>$NbMatchMax,
             ]
 
         );

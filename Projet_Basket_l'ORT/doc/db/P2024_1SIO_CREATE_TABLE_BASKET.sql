@@ -1,44 +1,44 @@
 CREATE TABLE Administrateur(
-                               idAdmin int,
+                               idAdmin int ,
                                nomAdmin VARCHAR(30),
                                preAdmin VARCHAR(30),
-                               dateAdmin DATE,
+                               dateAdmin DATETIME,
                                logAdmin VARCHAR(20),
                                mdpAdmin VARCHAR(20),
                                constraint Administrateur_Pk PRIMARY Key (idAdmin)
 ) ENGINE=INNODB;
 
 CREATE TABLE Gestincompetion(
-                                idComp int,
-                                date_debutComp DATE,
-                                date_finComp DATE,
+                                idComp int ,
+                                date_debutComp DATETIME,
+                                date_finComp DATETIME,
                                 nb_match_maxcom int,
                                 constraint Gestincompetion_Pk PRIMARY Key (idComp)
 )ENGINE=INNODB;
 
 CREATE TABLE GestionMatch(
-                             idMatch int,
+                             idMatch int ,
                              scoreMatch VARCHAR(10),
-                             jourMatch DATE,
+                             jourMatch DATETIME,
                              vainMatch VARCHAR(50),
                              constraint GestionMatch_Pk PRIMARY KEY(idMatch)
 )ENGINE=INNODB;
 
 CREATE TABLE Consultant(
-                           idConsu int,
+                           idConsu int ,
                            nomConsu VARCHAR(30),
                            preconsu VARCHAR(30),
-                           dateConsu DATE,
+                           dateConsu DATETIME,
                            logConsu VARCHAR(20),
                            mdpConsu VARCHAR(20),
                            constraint Consultant_Pk PRIMARY KEY(idConsu)
 )ENGINE=INNODB;
 
 CREATE TABLE Gerant(
-                       idGerant int,
+                       idGerant int ,
                        nomGerant VARCHAR(30),
                        preGerant VARCHAR(30),
-                       dateGerant DATE,
+                       dateGerant DATETIME,
                        logGerant VARCHAR(20),
                        mdpGerant VARCHAR(20),
                        idComp int,
@@ -60,17 +60,17 @@ CREATE TABLE Club(
 )ENGINE=INNODB;
 
 CREATE TABLE Joueur(
-                       idJoueur int,
+                       idJoueur int ,
                        nomJoueur VARCHAR(30),
                        preJoueur VARCHAR(30),
-                       dateJoueur DATE,
+                       dateJoueur DATETIME,
                        IdClub int ,
                        constraint Joueur_PK PRIMARY KEY(idJoueur),
                        constraint Joueur_FK FOREIGN KEY(IdClub) REFERENCES Club(IdClub)
 )ENGINE=INNODB;
 
 CREATE TABLE gagner(
-                       IdClub int,
+                       IdClub int ,
                        idMatch int,
                        constraint gagner_PK PRIMARY KEY(IdClub, idMatch),
                        constraint gagner_FK FOREIGN KEY(IdClub) REFERENCES Club(IdClub),
@@ -78,7 +78,7 @@ CREATE TABLE gagner(
 )ENGINE=INNODB;
 
 CREATE TABLE crée(
-                     idComp int,
+                     idComp int ,
                      idMatch int,
                      constraint crée_PK PRIMARY KEY(idComp, idMatch),
                      constraint crée_FK FOREIGN KEY(idComp) REFERENCES Gestincompetion(idComp),
