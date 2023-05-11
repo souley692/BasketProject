@@ -13,6 +13,9 @@
 
 <main>
     <form>
+        <label for="ID">ID :</label>
+        <input type="number" id="ID" name="ID" required>
+
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required>
 
