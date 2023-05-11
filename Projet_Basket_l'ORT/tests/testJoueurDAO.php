@@ -35,33 +35,8 @@ if (!is_null($db)) {
     $res = $repo->getAll();
     dump_var($res, DUMP, 'résultat:');
 
-    echo '<h1>Joueur numéro 5 </h1>';
+    echo '<h1>Joueur numéro 1 </h1>';
     $res = $repo->getById(1);
     dump_var($res, DUMP, 'résultat:');
 
-    echo '<h1>Ajout joueur</h1>';
-    $tab = array(
-        'nomJoueur' => "GOUDET",
-        'preJoueur' => "Joachim"
-    );
-    $joueur = new BO\Joueur($tab);
-    $res = $repo->insert($joueur);
-    dump_var($res, DUMP, 'résultat après insertion :');
-
-
-    echo '<h1>Modif acteur </h1>';
-    $joueur->setPreJoueur('Bertrand');
-    dump_var($res, DUMP, 'résultat:');
-    $res = $repo->update($joueur);
-    dump_var($res, DUMP, 'résultat:');
-
-
-    echo '<h1>Supression acteur </h1>';
-    $tab = array(
-        'idJoueur' => 26
-    );
-    $joueur = new BO\Joueur($tab);
-
-    $res = $repo->delete($joueur);
-    dump_var($res, DUMP, 'résultat:');
 }
