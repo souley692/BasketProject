@@ -19,7 +19,7 @@ $infoBdd = array(
     'host' => 'localhost',             // adresse du serveur, en cas de travail en local localhost
     'port' => 3306,        // Par défaut: 5432 pour postgreSQL, 3306 pour MySQL
     'charset' => 'UTF8',
-    'dbname' => 'basket',
+    'dbname' => 'basket l\'ort',
     'user' => 'root',
     'pass' => '',
 );
