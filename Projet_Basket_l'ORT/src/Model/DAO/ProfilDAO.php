@@ -4,9 +4,7 @@ namespace DAO;
 
 
 
-
-require_once '../../BOProfil.php';
-
+use BO\Profil;
 class ProfilDAO
 {
     private $db;

@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Gestion des joueurs</title>
+    <title>Creation des joueurs</title>
     <link rel="stylesheet" href="Joueur.css">
 </head>
 <body>
 
 <header>
-    <h1>Gestion des joueurs</h1>
+    <h1>Creation des joueurs</h1>
 </header>
 
 <main>
@@ -44,4 +44,4 @@
             <option value="Arrière">Arrière</option>
             <option value="Ailier">Ailier</option>
             <option value="Ailier-fort">Ailier-f
-
+                <input type="submit" value="Créer le joueur">
