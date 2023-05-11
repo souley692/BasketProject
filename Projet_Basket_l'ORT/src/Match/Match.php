@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Match.css">
     <title>Page Match</title>
 </head>
+<main>
 <body>
 <h1>Visualisation des matchs</h1>
 <table>
@@ -36,4 +37,5 @@
 </table>
 
 </body>
+    </main>
 </html>
