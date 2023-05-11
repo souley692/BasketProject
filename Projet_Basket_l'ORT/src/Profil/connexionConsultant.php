@@ -11,12 +11,12 @@
     <form action="traitAdmin.php" method="post">
         <h1 style="font-style: italic"> Bienvenu sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Admin</h1>
        <div class="input">
-        <label for="logAdmin"></label>
-        <input id="logAdmin" type="text" name="logAdmin"><br>
-        <label for="mdpAdmin"></label>
-        <input id="mdpAdmin" type="password" name="mdpAdmin"><br>
+        <label for="logConsu"></label>
+        <input id="logConsu" type="text" name="logConsu"><br>
+        <label for="mdpConsu"></label>
+        <input id="mdpConsu" type="password" name="mdpConsu"><br>
     </div>
-        <p class="inscr">Vous avez pas de <span>compte</span>.Veuiller retourner sur la page  <span>Profil</span> afin d'utiliser </p>
+        <p class="inscr">Je n'ai pas de <span>compte</span>.Je m'en <span>crée</span> un</p>
         <div align="center">
             <input type="submit" value="Connexion" id="Connexion" name="buttom">
         </div>

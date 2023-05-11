@@ -46,6 +46,7 @@ $_SESSION['tabPers'][]= $tabPers;
         </tr>
         <tr>
             <?php
+
             }
             ?>
 
