@@ -18,5 +18,5 @@ $n = array(
     'joueursClub' => $c
 );
 
-$nC = new Club($n['idClub'], $n['nomClub'], $n['locClub']);
+$nC = new Club($n['idClub'], $n['nomClub'], $n['locClub'], $n['gerantsClub'], $n['joueursClub']);
 var_dump($nC);
