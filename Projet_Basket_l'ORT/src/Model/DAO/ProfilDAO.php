@@ -17,7 +17,7 @@ class ProfilDAO
     public function getById($id)
     {
         $requete = $this->connexion->prepare('SELECT * FROM administrateur WHERE idAdmin = :id');
-        $requete->execute(array('idAdmin' => $id));
+        $requete->execute(array('id' => $id));
         $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 
         if ($resultat) {
