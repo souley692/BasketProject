@@ -37,7 +37,7 @@ echo "Veuiller completer tous les champs";
 
 <body id="formulaire">
     <form action="" method="post">
-        <h1 style="font-style: italic"> Bienvenu sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Consultant</h1>
+        <h1 style="font-style: italic"> Bienvenue sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Consultant</h1>
        <div class="input">
         <label for="logConsu"></label>
         <input id="logConsu" type="text" name="logConsu" placeholder="Login"><br>

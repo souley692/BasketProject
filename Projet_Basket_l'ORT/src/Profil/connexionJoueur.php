@@ -9,7 +9,7 @@
 
 <body id="formulaire">
 <form action="traitAdmin.php" method="post">
-    <h1 style="font-style: italic"> Bienvenu sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Joueur</h1>
+    <h1 style="font-style: italic"> Bienvenue sur BASKET' <img src="../../res/ballon_ort.png" alt="ballon" width="50" height="40">RT : Joueur</h1>
     <div class="input">
         <label for="logAdmin"></label>
         <input id="logAdmin" type="text" name="logAdmin"><br>

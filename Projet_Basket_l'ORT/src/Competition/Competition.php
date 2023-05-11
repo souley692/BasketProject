@@ -12,17 +12,17 @@
 	<a href="CreeCompetition.php">Cree une nouvelle compétition</a> <br> <br>
 	<table>
 		<tr>
-			<th>Equipe</th>
-			<th>Score</th>
+			<th>Compétitions</th>
+			<th>Dates Début - Fin</th>
 		</tr>
 		<tr>
-			<td>Equipe A</td>
-			<td><?php echo("ScoreA"); ?></td>
+			<td>Compétition 1</td>
+			<td><?php echo("X"); ?></td>
         </tr>
         </tr>
         <tr>
-            <td>Equipe B</td>
-            <td><?php echo("ScoreB"); ?></td>
+            <td>Compétition 2</td>
+            <td><?php echo("X"); ?></td>
         </tr>
     </table>
     <br>

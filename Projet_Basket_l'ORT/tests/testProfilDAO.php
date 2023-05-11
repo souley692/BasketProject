@@ -9,10 +9,10 @@ use src\Model\BO\Profil;
 use ProfilDAO as PDAO;
 
 $infoBdd = array(
-    'interface' => 'pdo',        // "pdo" ou "mysqli"
+    'interface' => 'pdo',      // "pdo" ou "mysqli"
     'type' => 'mysql',        //  mysql ou pgsql
-    'host' => 'localhost',             // adresse du serveur, en cas de travail en local localhost
-    'port' => 3306,        // Par défaut: 5432 pour postgreSQL, 3306 pour MySQL
+    'host' => 'localhost',   // adresse du serveur, en cas de travail en local localhost
+    'port' => 3306,         // Par défaut: 5432 pour postgreSQL, 3306 pour MySQL
     'charset' => 'UTF8',
     'dbname' => 'basket',
     'user' => 'root',

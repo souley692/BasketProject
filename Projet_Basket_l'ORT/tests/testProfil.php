@@ -8,11 +8,12 @@ require_once '../src/Model/BO/Profil.php';
 use \src\Model\BO\Profil;
 
 $n = array(
+    'id' => 03,
     'nom' => "josh",
     'prenom' => "Randy",
     'telephone' => 04532423,
     'profil' => 'admin'
 );
 
-$nP = new Profil($n['nom'], $n['prenom'], $n['telephone'], $n['profil']);
+$nP = new Profil($n['id'], $n['nom'], $n['prenom'], $n['telephone'], $n['profil']);
 var_dump($nP);
