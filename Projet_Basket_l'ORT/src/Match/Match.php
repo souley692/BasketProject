@@ -3,12 +3,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Match.css">
+    <link rel="stylesheet" href="M.css">
     <title>Page Match</title>
 </head>
 <main>
 <body>
-<h1>Visualisation des matchs</h1>
+<h1>Visualisation des matchs</h1> <br>
 <table>
     <tr>
         <th>Equipe domicile</th>
