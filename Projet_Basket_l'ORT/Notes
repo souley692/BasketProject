@@ -1,0 +1,6 @@
+ Du hostname  nom de votre service, en cours localhost
+ Du user d’identification  root pour MySql avec Wamp
+ Du password d’identification  vide pour MySql avec Wamp
+ Du dbname
+ Du port  3306 ou 3308 avec Wamp
+ De l’encodage  UTF-8

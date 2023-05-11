@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>Résultats de la compétition de basket-ball</title>
-    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="../Match/M.css">
 </head>
 <body>
 	<h1>Competition</h1>
@@ -18,68 +18,42 @@
 		<tr>
 			<td>Equipe A</td>
 			<td><?php echo("ScoreA"); ?></td>
-</tr>
-<tr>
-    <td>Equipe B</td>
-    <td><?php echo("ScoreB"); ?></td>
-</tr>
-</table>
+        </tr>
+        </tr>
+        <tr>
+            <td>Equipe B</td>
+            <td><?php echo("ScoreB"); ?></td>
+        </tr>
+    </table>
+    <br>
 
-<h1>Visualisation Compétition</h1>
+<h1>Visualisation Compétition</h1> <br>
 
     <table>
-        <thead>
         <tr>
-            <th>Position</th>
-            <th>Equipe</th>
-            <th>Score</th>
-            <th>Victoires</th>
-            <th>Défaites</th>
-            <th>Nuls</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th>Equipe domicile</th>
+            <th>Score domicile</th>
+            <th>Score visiteur</th>
+            <th>Equipe visiteur</th>
         </tr>
         <tr>
-            <td>2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Golden State Warriors</td>
+            <td>110</td>
+            <td>98</td>
+            <td>Los Angeles Lakers</td>
         </tr>
         <tr>
-            <td>3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Brooklyn Nets</td>
+            <td>120</td>
+            <td>115</td>
+            <td>Philadelphia 76ers</td>
         </tr>
         <tr>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Chicago Bulls</td>
+            <td>102</td>
+            <td>90</td>
+            <td>Miami Heat</td>
         </tr>
-        <tr>
-            <td>5</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tbody>
     </table>
 
 

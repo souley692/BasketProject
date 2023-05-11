@@ -6,41 +6,27 @@ class Joueur {
     private ?int $idJoueur = null;
     private ?string $preJoueur;
     private ?string $nomJoueur;
-    private \DateTime $dateJoueur;
+    private ?string $dateJoueur;
     private Club $clubJoueur;
 
-    public function __construct(?array $datas = null)
-    {
-        // Si le paramètre est différent de false
-        if(!is_null($datas)){
-            // Si tel élément existe alors on lui attribut la valeur, sinon il est null
-            (isset($datas['idJoueur']))?$this-> setIdJoueur($datas['idJoueur']):$this->numAct = null;
-            (isset($datas['nomJoueur']))?$this-> setNomJoueur($datas['nomJoueur']):$this->nomAct ="";
-            (isset($datas['preJoueur']))?$this-> setPreJoueur($datas['preJoueur']):$this->preAct ="";
-            (isset($datas['dateJoueur']))?$this-> setDateJoueur($datas['dateJoueur']):$this->dateJoueur=date_date_set();
-            (isset($datas['clubJoueur']))?$this-> setClubJoueur(($datas['clubJoueur'])):$this->clubJoueur;
-        }
+    public function __construct(?int $idJoueur, ?string $preJoueur, ?string $nomJoueur, ?string $dateJoueur, Club $clubJoueur){
+        $this->idJoueur = $idJoueur;
+        $this->preJoueur = $preJoueur;
+        $this->nomJoueur = $nomJoueur;
+        $this->dateJoueur = $dateJoueur;
+        $this->clubJoueur = $clubJoueur;
     }
 
     // Accesseurs/Mutateurs
-    public function getIdJoueur():?int{
+    public function getIdJoueur(): ?int{
         return $this->idJoueur;
     }
 
     function setIdJoueur(int $idJoueur):self{
-        if($this->idJoueur == null) {
-            $tmp = filter_var($idJoueur, FILTER_VALIDATE_INT);
-            if (!is_null($tmp)) {
-                $this->idJoueur = $tmp;
-            }
-            else {
-                $this->idJoueur = null;
-            }
-        }
-
+        $this->idJoueur = $idJoueur;
         return $this;
     }
-    public function getPreJoueur():?string {
+    public function getPreJoueur(): ?string {
         return $this->preJoueur;
     }
 
@@ -58,11 +44,11 @@ class Joueur {
         return $this;
     }
 
-    public function getDateJoueur():?\DateTime {
+    public function getDateJoueur():?string {
         return $this->dateJoueur;
     }
 
-    public function setDateJoueur(\DateTime $dateJoueur):self {
+    public function setDateJoueur(?string $dateJoueur):self {
         $this->dateJoueur = $dateJoueur;
         return $this;
     }
@@ -76,3 +62,12 @@ class Joueur {
         return $this;
     }
 }
+
+/*if(!is_null($datas)){
+    // Si tel élément existe alors on lui attribut la valeur, sinon il est null
+    (isset($datas['idJoueur']))?$this-> setIdJoueur($datas['idJoueur']):$this->numAct = null;
+    (isset($datas['nomJoueur']))?$this-> setNomJoueur($datas['nomJoueur']):$this->nomAct ="";
+    (isset($datas['preJoueur']))?$this-> setPreJoueur($datas['preJoueur']):$this->preAct ="";
+    (isset($datas['dateJoueur']))?$this-> setDateJoueur($datas['dateJoueur']):$this->dateJoueur=date_date_set();
+    (isset($datas['clubJoueur']))?$this-> setClubJoueur(($datas['clubJoueur'])):$this->clubJoueur;
+}*/

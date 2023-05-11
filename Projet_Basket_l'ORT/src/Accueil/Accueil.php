@@ -13,10 +13,6 @@
 
     <main class="font-color">
         <section style="display: inline-block;">
-            <a href="../Competition/Competition.php"">Competition</a>
-        </section>
-
-        <section style="display: inline-block;">
             <a href="../Club/EcranGestionClub.php">Club</a>
         </section>
 
@@ -26,6 +22,10 @@
 
         <section style="display: inline-block;">
             <a href="../Match/Match.php">Match</a>
+        </section>
+
+        <section style="display: inline-block;">
+            <a href="../Competition/Competition.php"">Competition</a>
         </section>
 
         <section style="display: inline-block;">

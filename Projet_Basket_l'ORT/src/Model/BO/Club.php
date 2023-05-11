@@ -8,8 +8,8 @@ Club {
     private ?int  $idClub;
     private ?string $nomClub;
     private ?string $locClub;
-    private ?array $gerantsClub = array();
-    private ?array $joueursClub = array();
+    private ?array $gerantsClub;
+    private ?array $joueursClub;
 
     public function __construct($idClub, $nomClub, $locClub) {
         $this->idClub = $idClub;
@@ -72,12 +72,12 @@ Club {
         return $this;
     }
 
-    public function addJoueurClub(JoueurClub $joueurClub): self {
+    public function addJoueurClub(Joueur $joueurClub): self {
         $this->joueursClub[] = $joueurClub;
         return $this;
     }
 
-    public function removeJoueurClub(JoueurClub $joueurClub): self {
+    public function removeJoueurClub(Joueur $joueurClub): self {
         $key = array_search($joueurClub, $this->joueursClub);
         if ($key !== false) {
             unset($this->joueursClub[$key]);
