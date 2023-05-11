@@ -1,6 +1,12 @@
 <?php
 require_once "../config/appConfig.php";
 require_once "../config/Connexionbdd.php";
+require_once "../config/globalConfig.php";
+require_once "../src/Model/DAO/ProfilDAO.php";
+require_once "../src/Model/BO/Profil.php";
+
+use src\Model\BO\Profil;
+use ProfilDAO as PDAO;
 
 $infoBdd = array(
     'interface' => 'pdo',        // "pdo" ou "mysqli"
@@ -15,7 +21,7 @@ $infoBdd = array(
 
 
 $db = connectBdd($infoBdd);
-$test = new ProfilDAO($db);
+$test = new PDAO($db);
 
 // Obtenir un enregistrement par son ID
 $id = 1;
