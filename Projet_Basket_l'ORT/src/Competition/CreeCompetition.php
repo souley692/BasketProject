@@ -11,14 +11,24 @@ use BO\Competition;
         //apper function
 		$db = connectBdd($infoBdd);
         $repo = new CompetitionDAO($db);
+
+        $DateDebut = $_POST['datedebut'];
+        $DateFin = $_POST['datefin'];
+        $Date_Debut = date_create($DateDebut);
+        $Date_Fin = date_create($DateFin);
+
+        $NbMatchMax= filter_input(INPUT_POST, 'max',FILTER_SANITIZE_NUMBER_INT);
+
+
 		
 		
 		$tab = array (
-			'dat_debComp'=> $_POST["datedebut"],
-			'dat_finComp'=>$_POST["datefin"],
-			'nb_match_maxComp'=>$_POST["max"],
+			'dat_debComp'=> $Date_Debut,
+			'dat_finComp'=>$Date_Fin,
+			'nb_match_maxComp'=>$NbMatchMax,
 		);
 		$act = new Competition($tab);
+        var_dump($act);
 
 		$res = $repo->insert($act);
 		
@@ -26,35 +36,4 @@ use BO\Competition;
 	}
 
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Résultats de la compétition de basket-ball</title>
-		<link rel="stylesheet" href="Competition.css">
-	</head>
-	<body>
-		<h1>Création Competition</h1>
-		
-		<form action="" method="post">
 
-			<div>
-				<label for="peas">Date de debut</label>
-				<input type="datetime" name="datedebut" id="datedebut">
-			</div>
-			<div>
-				<label for="peas">Date de fin</label>
-				<input type="datetime" name="datefin" id="datefin">
-			</div>
-			<div>
-				<label for="peas">Nombre max</label>
-				<input type="text"  name="max" id="max">
-			</div>
-			</br>
-
-			<input type="submit" value="Cree la competition">
-
-		</form>
-
-		
-	</body>
-</html>

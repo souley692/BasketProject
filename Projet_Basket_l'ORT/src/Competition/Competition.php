@@ -9,7 +9,7 @@
 <body>
 	<h1>Competition</h1>
     <br>
-	<a href="CreeCompetition.php">Cree une nouvelle compétition</a> <br> <br>
+	<a href="FormulaireInsertCompet.php">Cree une nouvelle compétition</a> <br> <br>
 	<table>
 		<tr>
 			<th>Equipe</th>
