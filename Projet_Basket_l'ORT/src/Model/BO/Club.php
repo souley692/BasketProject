@@ -11,10 +11,12 @@ Club {
     private ?array $gerantsClub;
     private ?array $joueursClub;
 
-    public function __construct($idClub, $nomClub, $locClub) {
+    public function __construct(?int $idClub, ?string $nomClub, ?string $locClub, ?array $gerantsClub, ?array $joueursClub) {
         $this->idClub = $idClub;
         $this->nomClub = $nomClub;
         $this->locClub = $locClub;
+        $this->gerantsClub = $gerantsClub;
+        $this->joueursClub = $joueursClub;
     }
 
     // Accesseurs/Mutateurs

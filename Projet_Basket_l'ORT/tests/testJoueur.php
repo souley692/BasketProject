@@ -7,8 +7,9 @@ require_once '../src/Model/BO/Club.php';
 
 use src\Model\BO\Club;
 use src\Model\BO\Joueur;
-
-$c = new Club(2, "test", "miami");
+$array1 = array();
+$array2 = array();
+$c = new Club(2, "test", "miami",$array1, $array2);
 
 $n = array(
     'idJoueur'=> 1,
