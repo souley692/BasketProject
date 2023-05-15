@@ -1,5 +1,5 @@
 CREATE TABLE Administrateur(
-                               idAdmin int ,
+                               idAdmin int NOT NULL AUTO_INCREMENT ,
                                nomAdmin VARCHAR(30),
                                preAdmin VARCHAR(30),
                                dateAdmin DATETIME,
@@ -9,7 +9,7 @@ CREATE TABLE Administrateur(
 ) ENGINE=INNODB;
 
 CREATE TABLE Gestincompetion(
-                                idComp int ,
+                                idComp int NOT NULL AUTO_INCREMENT ,
                                 date_debutComp DATETIME,
                                 date_finComp DATETIME,
                                 nb_match_maxcom int,
@@ -17,7 +17,7 @@ CREATE TABLE Gestincompetion(
 )ENGINE=INNODB;
 
 CREATE TABLE GestionMatch(
-                             idMatch int ,
+                             idMatch int  NOT NULL AUTO_INCREMENT ,
                              scoreMatch VARCHAR(10),
                              jourMatch DATETIME,
                              vainMatch VARCHAR(50),
@@ -25,7 +25,7 @@ CREATE TABLE GestionMatch(
 )ENGINE=INNODB;
 
 CREATE TABLE Consultant(
-                           idConsu int ,
+                           idConsu int NOT NULL AUTO_INCREMENT ,
                            nomConsu VARCHAR(30),
                            preconsu VARCHAR(30),
                            dateConsu DATETIME,
@@ -35,7 +35,7 @@ CREATE TABLE Consultant(
 )ENGINE=INNODB;
 
 CREATE TABLE Gerant(
-                       idGerant int ,
+                       idGerant int NOT NULL AUTO_INCREMENT ,
                        nomGerant VARCHAR(30),
                        preGerant VARCHAR(30),
                        dateGerant DATETIME,
@@ -47,7 +47,7 @@ CREATE TABLE Gerant(
 )ENGINE=INNODB;
 
 CREATE TABLE Club(
-                     IdClub int ,
+                     IdClub int NOT NULL AUTO_INCREMENT ,
                      locClub VARCHAR(40),
                      nomClub VARCHAR(30),
                      gerantClub VARCHAR(30),
@@ -60,7 +60,7 @@ CREATE TABLE Club(
 )ENGINE=INNODB;
 
 CREATE TABLE Joueur(
-                       idJoueur int ,
+                       idJoueur int NOT NULL AUTO_INCREMENT ,
                        nomJoueur VARCHAR(30),
                        preJoueur VARCHAR(30),
                        dateJoueur DATETIME,

@@ -1,12 +1,18 @@
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=testbasket;charset=utf8','root','');
+require_once '../config/appConfig.php';
+require_once '../config/globalConfig.php';
+require_once '../config/Connexionbdd.php';
+
+$db = connectBdd($infoBdd);
+
+//session_start();
+///$bdd = new PDO('mysql:host=localhost;dbname=testbasket;charset=utf8','root','');
 if(isset($_POST['buttom'])){
     if(!empty($_POST['logGerant']) AND !empty($_POST['mdpGerant'])){
         $logGerant = htmlspecialchars($_POST['logGerant']);
         $mdpGerant =sha1($_POST['mdpGerant']);// decripter le message
 
-        $recupLo= $bdd->prepare('SELECT * FROM Gerant Where logGerant= ? AND mdpGerant =?');// selction les log/mdp saisie par utilisateur
+        $recupLo= $db->prepare('SELECT * FROM Gerant Where logGerant= ? AND mdpGerant =?');// selction les log/mdp saisie par utilisateur
         $recupLo->execute(array($logGerant, $mdpGerant));// renvoie tableau qui contient nos element
         // si on a un elmai connecter
         if($recupLo-> rowCount() >0){

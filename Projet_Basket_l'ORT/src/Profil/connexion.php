@@ -6,9 +6,10 @@ if(isset($_POST['buttom'])){
         $logAdmin = htmlspecialchars($_POST['logAdmin']);
         $mdpAdmin =sha1($_POST['mdpAdmin']);// decripter le message
 
-        $recupLo= $bdd->prepare('SELECT * FROM Administrateur Where logAdmin= ? AND mdpAdmin =?');// selction les log/mdp saisie par utilisateur
+        $recupLo= $bdd->prepare('0');// selction les log/mdp saisie par utilisateur
         $recupLo->execute(array($logAdmin, $mdpAdmin));// renvoie tableau qui contient nos element
         // si on a un elmai connecter
+        var_dump($recupLo);
         if($recupLo-> rowCount() >0){
             $_SESSION['logAdmin']= $logAdmin;
             $_SESSION['mdpAdmin']= $mdpAdmin;
