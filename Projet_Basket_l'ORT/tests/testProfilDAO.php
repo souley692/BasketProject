@@ -26,3 +26,5 @@ $test = new PDAO($db);
 // Obtenir un enregistrement par son ID
 $id = 1;
 $enregistrement = $test->getById($id);
+
+echo dump_var($enregistrement);

@@ -13,7 +13,7 @@
 </header>
 
 <main>
-    <form>
+    <formt method="POST" action="traitCreationClub.php>
         <label for="nomClub">Nom du club :</label>
         <input type="text" id="nomClub" name="nomClub" required>
 
