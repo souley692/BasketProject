@@ -14,8 +14,8 @@ use BO\Competition;
 
         $DateDebut = $_POST['datedebut'];
         $DateFin = $_POST['datefin'];
-        $Date_Debut = date_create($DateDebut);
-        $Date_Fin = date_create($DateFin);
+        $Date_Debut = $DateDebut;
+        $Date_Fin = $DateFin;
 
         $NbMatchMax= filter_input(INPUT_POST, 'max',FILTER_SANITIZE_NUMBER_INT);
 
@@ -27,6 +27,9 @@ use BO\Competition;
 			'dat_finComp'=>$Date_Fin,
 			'nb_match_maxComp'=>$NbMatchMax,
 		);
+
+		$laCompet = new Competition($tab);
+		$unecomp = $repo->insert($laCompet);
 		$act = new Competition($tab);
         var_dump($act);
 

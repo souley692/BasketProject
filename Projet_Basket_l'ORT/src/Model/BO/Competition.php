@@ -5,16 +5,16 @@ namespace BO;
 class Competition
 {
   private ?int $idcomp;
-  private ?\DateTime $dat_debComp;
-  private ?\DateTime $dat_finComp;
+  private ?String $dat_debComp;
+  private ?String $dat_finComp;
   private? int $nb_match_maxComp;
     function getIdcomp():? int {
         return $this ->idcomp;
     }
-    function getDat_debComp():?\DateTime {
+    function getDat_debComp():String {
         return $this -> dat_debComp;
     }
-    function getDat_finComp():?\DateTime{
+    function getDat_finComp():String {
         return $this -> dat_finComp;
     }
 
@@ -25,11 +25,11 @@ class Competition
     function setIdcomp(int $idComp): void {
         $this->idcomp = $idComp;
     }
-    function setDat_debComp(\DateTime $dat_debComp): void {
+    function setDat_debComp(String $dat_debComp): void {
         $this->dat_debComp =$dat_debComp;
     }
 
-    function setDat_finComp(\DateTime $dat_finComp): void {
+    function setDat_finComp(String $dat_finComp): void {
         $this->dat_finComp = $dat_finComp;
     }
     function setNb_match_maxComp(int $nb_match_maxComp): void {

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Résultats de la compétition de basket-ball</title>
+	<title>Competition Basket ORT</title>
     <link rel="stylesheet" href="../Match/M.css">
 </head>
 <body>

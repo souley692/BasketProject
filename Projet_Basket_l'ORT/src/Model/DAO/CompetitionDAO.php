@@ -53,8 +53,8 @@ class CompetitionDAO
 
     function insert(Competition $uneCompet): ?Competition{
 
-        $DateDebut = date_create($uneCompet->getDat_debComp()->format('Y-m-d'));
-        $DateFin = date_create($uneCompet->getDat_finComp()->format('Y-m-d'));
+        $DateDebut = ($uneCompet->getDat_debComp());
+        $DateFin = ($uneCompet->getDat_finComp());
         $NbMatchMax = (int)($uneCompet->getNb_match_maxComp());
 
 
