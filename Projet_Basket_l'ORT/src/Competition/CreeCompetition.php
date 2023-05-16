@@ -33,9 +33,8 @@ use BO\Competition;
 		$act = new Competition($tab);
         var_dump($act);
 
-		$res = $repo->insert($act);
-		
-		var_dump($res);
+
+
 	}
 
 ?>

@@ -8,7 +8,7 @@ class CompetitionDAO
 {
 
     private \PDO $bdd;
-    function __construct(\PDO $bdd){
+    function __construct( \PDO $bdd){
 
         $this->bdd=$bdd;
     }

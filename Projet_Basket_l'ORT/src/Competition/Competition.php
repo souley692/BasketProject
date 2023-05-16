@@ -1,4 +1,11 @@
 <?php
+require_once '../../config/appConfig.php';
+require_once '../../config/globalConfig.php';
+require_once '../../config/Connexionbdd.php';
+
+$repo = new \DAO\CompetitionDAO($infoBdd);
+$res = $repo->getAll();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,23 +17,32 @@
 	<h1>Competition</h1>
     <br>
 	<a href="FormulaireInsertCompet.php">Cree une nouvelle compétition</a> <br> <br>
-	<table>
-		<tr>
-			<th>Compétitions</th>
-			<th>Dates Début - Fin</th>
-		</tr>
-		<tr>
-			<td>Compétition 1</td>
-			<td><?php echo("X"); ?></td>
-        </tr>
+	<?php
+    for($i =0;$i<count($res); $i++){
+
+
+    ?>
+    <table>
+        <tr>
+            <td>Competition</td>
+            <td>date debut Competion</td>
+            <td>date debut Competion</td>
+            <td>Nombre match </td>
+
         </tr>
         <tr>
-            <td>Compétition 2</td>
-            <td><?php echo("X"); ?></td>
+            <td><?php echo $res[$i]["dat_debComp"]?></td>;
+            <td><?php echo $res[$i]["dat_finComp"]?></td>;
+            <td><?php echo $res[$i]["nb_match_maxComp"]?></td>;
+
         </tr>
+
     </table>
     <br>
+<?php
+    }
 
+    ?>
 <h1>Visualisation Compétition</h1> <br>
 
     <table>
